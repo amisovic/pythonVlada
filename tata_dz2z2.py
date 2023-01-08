@@ -72,14 +72,14 @@ def filtriraj_zivotinje():
 
 def print_list(lista):
     i = 0
-    while i < len(lista)-1:
+    while i < len(lista):
         print (lista[i])
         i +=1
     print ()
 
 def print_formated():
     i = 0
-    while i < len(filt_zivotinje)-1:
+    while i < len(filt_zivotinje):
         print (filt_zivotinje[i][1], " - ", filt_zivotinje[i][0])
         i +=1
     print ()
@@ -89,14 +89,15 @@ def DrugiClan(element):
     return element[1]
 
 #input_file_name = input("Unesi fajl koji ce se koristiti kao ulaz.\n")
-input_file_name="inPublic.csv"
+#input_file_name="inPublic.csv"
+input_file_name="in"
 check_file(input_file_name)
 #print("Ovo su atributi - kolone:\n", atributi[:])
 #print ("A ovo su zivotinje: \n", zivotinje[:])    
 ucitaj_uslove()
 #print (uslovi[:])
 filtriraj_zivotinje()
-#print_list(filt_zivotinje)
+print_list(filt_zivotinje)
 
 filt_zivotinje.sort(key=DrugiClan)
 #print_list(filt_zivotinje)
